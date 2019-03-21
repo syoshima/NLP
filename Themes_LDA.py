@@ -52,11 +52,15 @@ with open('dictionary1.csv', mode='w') as csvFile:
             words = ab_list.iat[int(i),0].lower()        
             # count words in words,copiar count to new line in txt file
             suma = len(words.split())
+            words1 = words.split()      
+            words1 = [s.replace('"','') for s in words1]
+            cnt = Counter(words1)
             # open txt file, copy words to this txt file,
             with io.open("C:\\texts\\file_" + str(i) + ".txt", 'w', encoding='utf-8') as f:
                 f.write(words)
                 f.write('\n')
-                f.write(str(suma))
+                f.write(str(cnt))
+                
             # copy file path to alldocs.txt
             docs.write("C:\\texts\\file_" + str(i) + ".txt")
             docs.write("\n")
