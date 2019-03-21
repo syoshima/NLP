@@ -35,7 +35,6 @@ def createFolder(directory):
     except OSError:
         print ('Error: Creating directory. ' +  directory)
 createFolder('./texts/') # check if folder exits, if so rewrite 
-#C:\Users\Samy Abud Yoshima\Anaconda3\Library\courses\MIT XPRO\DataScience+BigData\Module 1 - Clustering\CaseSt 1.1.2\texts
 
 # Database pre-procesing
 # REGEX
@@ -54,12 +53,12 @@ with open('dictionary1.csv', mode='w') as csvFile:
             # count words in words,copiar count to new line in txt file
             suma = len(words.split())
             # open txt file, copy words to this txt file,
-            with io.open("C:\\Users\\Samy Abud Yoshima\\Anaconda3\\Library\\courses\\MIT XPRO\\DataScience+BigData\\Module 1 - Clustering\\CaseSt 1.1.2\\texts\\file_" + str(i) + ".txt", 'w', encoding='utf-8') as f:
+            with io.open("C:\\texts\\file_" + str(i) + ".txt", 'w', encoding='utf-8') as f:
                 f.write(words)
                 f.write('\n')
                 f.write(str(suma))
             # copy file path to alldocs.txt
-            docs.write("C:\\Users\\Samy Abud Yoshima\\Anaconda3\\Library\\courses\\MIT XPRO\\DataScience+BigData\\Module 1 - Clustering\\CaseSt 1.1.2\\texts\\file_" + str(i) + ".txt")
+            docs.write("C:\\texts\\file_" + str(i) + ".txt")
             docs.write("\n")
             word = tokenizer.tokenize(words)
             # Lexicon normalization and stemmization
