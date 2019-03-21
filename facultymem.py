@@ -40,9 +40,9 @@ for tag in tags:
             tag1 = tag1.replace(char,'e')
         if char in "üÜÚùúÚÛû":
             tag1 = tag1.replace(char,'u')
-          if char in "ïÏìÌÍîÎ":
+        if char in "ïÏìÌÍîÎ":
             tag1 = tag1.replace(char,'i')    
-    if author is not in Authors:
+    if tag1 not in Authors:
         Authors.append(tag1)
 Authors = [x for x in Authors if x != ""]
 print('Number of Authors: ',np.size(Authors))
