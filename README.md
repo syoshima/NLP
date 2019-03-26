@@ -1,6 +1,8 @@
 
 ##Stochastic Variational Inference for Latent Dirichlet Allocation
 
+>>> LDA Example SVILDA in themes from research papers abstracts from authors of inputed department
+
 Code structure from the OnlineVB code provided by Matthew D. Hoffman (mdhoffma@cs.princeton.edu) and the algorithm is as described in Hoffman's paper below
 
 Based on the following papers:
